@@ -30,7 +30,7 @@ def yt2mp3():
 		for i in yt.streams:
 			if i.mime_type == 'audio/mp4':
 				print('ditemukan')
-				open('mp3/%s.mp3'%(i.title),'wb').write(requests.get(i.url).content)
+				open('mp3/%s.mp3'%(i.title.replace('/','_')),'wb').write(requests.get(i.url).content)
 				break
 			else:
 				pass
