@@ -36,7 +36,7 @@ def yt2mp3():
 				pass
 		return {
 			'status':True,
-			'title':i.title,
+			'title':i.title.replace('/','_'),
 			'file_size':convert_size(i.filesize),
 			'file':'/unduh/%s.mp3'%(quote(i.title))
 			}
